@@ -11,7 +11,7 @@ class HomeController {
         if(numbers.length == 2) {
             numbers[0] = parseInt(numbers[0], 10)
             numbers[1] = parseInt(numbers[1], 10)
-            if(typeof numbers[0] !== 'number' || typeof numbers[1] !== 'number') { 
+            if(isNaN(numbers[0]) || isNaN(numbers[1]) || typeof numbers[0] !== 'number' || typeof numbers[1] !== 'number') { 
                 res.json({message: ` Input format is not supprted yet! please try digits!`})
             }
             res.json(egyptianUnitFraction(numbers[0],numbers[1]))
