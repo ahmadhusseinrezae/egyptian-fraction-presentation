@@ -1,0 +1,22 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web-app.js",
+  "scripts": {
+    "start" : "node web-app.js",
+    "server" : "nodemon web-app.js",
+    "client" : "cd ../ && npm start", 
+    "dev" : "concurrently \"npm run server\" \" npm run client \""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "egyptian-unitfraction": "0.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10"
+  }
+}
